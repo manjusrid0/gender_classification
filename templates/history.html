@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Prediction History</h2>
+
+<div class="row">
+
+{% for item in history %}
+
+<div class="col-md-3">
+
+<div class="history-card">
+
+{% if item.image %} <img src="{{ item.image }}" width="100%">
+{% endif %}
+
+<h5>{{ item.gender }}</h5>
+
+<p>{{ item.confidence }}%</p>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

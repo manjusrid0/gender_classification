@@ -1,23 +1,84 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <title>Prediction Result</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="stylesheet"
+href="{{ url_for('static',filename='css/style.css') }}">
+
+<style>
+
+body{
+height:100vh;
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#3e2723,#6d4c41,#a1887f);
+font-family:Segoe UI;
+}
+
+.result-card{
+background:#fff3e0;
+padding:40px;
+border-radius:18px;
+text-align:center;
+color:#4e342e;
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+width:400px;
+}
+
+.result-card img{
+border-radius:10px;
+margin-bottom:15px;
+max-width:100%;
+}
+
+.result-card h3{
+margin-top:10px;
+font-weight:600;
+}
+
+.result-card h4{
+margin-bottom:20px;
+}
+
+.btn-caramel{
+background:#c68c53;
+border:none;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+}
+
+.btn-caramel:hover{
+background:#a97142;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="result-card">
 
-<h1>Prediction Result</h1>
+<h2>Prediction Result</h2>
 
-<img src="{{ image_path }}" width="250">
+<img src="{{ image_path }}">
 
-<h2>{{ prediction }}</h2>
+<h3>{{ prediction }}</h3>
 
-<a href="/">Try Another</a>
+<h4>Confidence : {{ confidence }} %</h4>
+
+<a href="/" class="btn-caramel">Back to Dashboard</a>
 
 </div>
 
 </body>
+
 </html>

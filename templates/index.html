@@ -1,31 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>AI Gender Detector</title>
+{% extends "base.html" %}
 
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% block content %}
 
-</head>
+<div class="text-center">
 
-<body>
+<h1>AI Gender Detection System</h1>
 
-<div class="container">
+<p class="mt-3">
+Analyze facial images using deep learning.
+Upload photos or use live camera detection.
+</p>
 
-<h1>AI Gender Detection</h1>
-<p>Upload a face image to detect gender</p>
-
-<form action="/predict" method="post" enctype="multipart/form-data">
-
-<label class="upload-box">
-<input type="file" name="file" required>
-<span>Choose Image</span>
-</label>
-
-<button type="submit">Predict</button>
-
-</form>
+<a href="/upload" class="btn btn-caramel mt-4">Start Detection</a>
 
 </div>
 
-</body>
-</html>
+{% endblock %}
