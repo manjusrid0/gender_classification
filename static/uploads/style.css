@@ -1,0 +1,43 @@
+body{
+    font-family: Arial;
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    color:white;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.upload-box{
+    display:block;
+    border:2px dashed white;
+    padding:30px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+input[type=file]{
+    display:none;
+}
+
+button{
+    padding:10px 25px;
+    border:none;
+    border-radius:5px;
+    background:white;
+    color:#333;
+    font-weight:bold;
+    cursor:pointer;
+}
