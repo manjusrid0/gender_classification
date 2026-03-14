@@ -140,6 +140,9 @@ Result + Confidence Score
 GitHub:  
 https://github.com/manjusrid0
 
+LinkedIn:  
+www.linkedin.com/in/manjusri-d
+
 ---
 
 ## License
